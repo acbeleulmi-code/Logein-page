@@ -1,41 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>صفحة تسجيل الدخول</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        .login-container h1 {
+            margin-bottom: 20px;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .login-container button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4285f4;
+            color: white;
+            cursor: pointer;
+        }
+        .login-container img {
+            max-width: 150px;
+            margin: 15px 0;
+        }
+        .links {
+            margin-top: 10px;
+        }
+        .links a {
+            text-decoration: none;
+            color: #4285f4;
+            margin: 0 5px;
+        }
+    </style>
 </head>
-<body class=" bg-[url(img/im.gif)] bg-no-repeat bg-cover text-white bg-center overflow-hidden h-screen flex items-center justify-center">
-  
-    <form class="  backdrop-blur-lg bg-white/10  h-125 w-110 rounded-2xl shadow-2xl  shadow-purple-500/30  border border-white/20 p-8 overflow-hidden ">
+<body>
+    <div class="login-container">
+        <h1>Welcome Back</h1>
+        <!-- صورة GIF الموجودة في المستودع -->
+        <img src="https://raw.githubusercontent.com/acbeleulmi-code/Logein-page/main/im.gif" alt="Gif">
 
-        <h1 class=" text-3xl font-bold text-center mb-2">Walcome Back </h1>
-        <p class=" text-center text-white/70 font-semibold mb-6">Signe in to continue</p>
-        
-           <div class="flex mb-4 gap-3 overflow-hidden"> 
-             <input type="text" placeholder="first name" class="border border-white/30 w-1/2 focus:border-purple-700 focus:outline-none transition duration-300 focus:ring-2 focus:ring-purple-700 bg-white/10  p-2 gap-3  rounded-lg ">
-             <input type="text" placeholder="last name"  class="border border-white/30  w-1/2 focus:border-purple-700 focus:outline-none transition duration-300 focus:ring-2 focus:ring-purple-700 bg-white/10  p-2  gap-3  rounded-lg " > 
-           </div>
-           <div class="flex flex-col gap-5">
-             <input type="email" placeholder="email" class="border border-white/30 focus:border-purple-700 focus:outline-none transition duration-300 focus:ring-2 focus:ring-purple-700   p-2 gap-3 bg-white/10 rounded-lg ">
-             <input type="password" placeholder="password"  class="border border-white/30 focus:border-purple-700 focus:outline-none transition duration-300 focus:ring-2 focus:ring-purple-700   p-2 gap-3 bg-white/10 rounded-lg ">
-             <input type="submit" value="signe up" class="mt-2 py-2 rounded-lg text-white font-semibold bg-gradient-to-r from-blue-600 to-purple-600 transform hover:scale-105 hover:brightness-150 hover:shadow-xl transition duration-300 hover:from-blue-700 hover:to-purple-700 p-2 rounded-2xl  ">
-           </div>
-           <div class="gap-10 flex justify-between items-center p-3 text-sm text-white/70 ">
-            <label for="">
-             <input type="checkbox" class="mr-2 accent-purple-700">
-               remember me
-            </label>
-             <a href="" class="hover:underline">forget my password</a>
-          </div>
-        <div class="flex flex-row items-center justify-center h-10 gap-6 mt-6">
-          <img src="img/facebook (1).png" alt="" class=" hover:scale-110 transition cursor-pointer w-8">
-          <img src="img/instagram (2).png" alt="" class=" hover:scale-110 transition cursor-pointer w-8">
-          <img src="img/social.png" alt="" class=" hover:scale-110 transition cursor-pointer w-8">
+        <form>
+            <input type="text" placeholder="Username" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <button type="submit">Sign In</button>
+        </form>
+
+        <div class="links">
+            <input type="checkbox" id="remember"> <label for="remember">Remember me</label><br>
+            <a href="#">Forget my password</a>
         </div>
-           
-      </form>
 
+        <!-- مكان لإضافة صورة Social إذا قمت برفعها لاحقًا -->
+        <!-- <img src="https://raw.githubusercontent.com/acbeleulmi-code/Logein-page/main/social.png" alt="Social"> -->
+    </div>
 </body>
 </html>
